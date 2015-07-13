@@ -1,0 +1,21 @@
+{
+    "name": "ut-angular-formWatcher",
+    "version": "0.0.1",
+    "authors": "v.lebadezet@untemps.net",
+    "description": "Watch one or several forms and notify observers of all changes in their validation status",
+    "main": "dist/ut-angular-formWatcher.js",
+    "license": "MIT",
+    "private": false,
+    "ignore": [
+        "**/.*",
+        "node_modules",
+        "bower_components",
+        "test",
+        "tests"
+    ],
+    "devDependencies": {
+        "angular": "~1.4.2",
+        "angular-sanitize": "~1.4.2",
+        "angular-mocks": "~1.4.2"
+    }
+}
