@@ -49,6 +49,10 @@
             return form !== null;
         };
 
+        __this.registeredFormCount = function () {
+            return __this.forms.length;
+        };
+
         __this.areAllFormsValid = function () {
             var result = true;
             var i = 0;
