@@ -49,6 +49,13 @@
             return form !== null;
         };
 
+        __this.unregisterAllForms = function () {
+            while (__this.forms.length > 0) {
+                __this.unregisterForm(__this.forms[0].name);
+            }
+            return __this.forms.length === 0;
+        };
+
         __this.registeredFormCount = function () {
             return __this.forms.length;
         };
@@ -81,7 +88,7 @@
                 form.isValid = isValid;
             }
 
-            $rootScope.$emit('utFormService:formValidityChange', form, __this.areAllFormsValid());
+            $rootScope.$emit('formService:formValidityChange', form, __this.areAllFormsValid());
 
             return form !== null;
         };
