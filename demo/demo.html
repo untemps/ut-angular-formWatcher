@@ -23,13 +23,49 @@
                 <h4>Results</h4>
 
                 <div ng-controller="demoController as ctrl">
-                    <form name="myForm" novalidate ut-form-watcher="myFormId">
+                    <section>
+                        <form name="myForm1" novalidate ut-form-watcher="form1">
 
-                        <input id="myInput" name="myInput" type="text" placeholder="Type something..."
-                               ng-model="ctrl.myModel" ng-model-options="{updateOn: 'default'}" ng-required="true">
+                            <fieldset>
+                                <legend>Form 1</legend>
+                                <input id="myInput1" name="myInput1" type="text" placeholder="Type something..."
+                                       ng-model="ctrl.model1" ng-required="true">
+                                <span>Is form 1 valid? {{ctrl.isForm1Valid}}</span>
 
-                    </form>
-                    <span>Is my form valid? {{ctrl.isValid}}</span>
+
+                        </form>
+
+                    </section>
+
+                    <section>
+                        <form name="myForm2" novalidate ut-form-watcher="form2">
+
+                            <fieldset>
+                                <legend>Form 2</legend>
+                                <input id="myInput2" name="myInput2" type="text" placeholder="Type something..."
+                                       ng-model="ctrl.model2" ng-required="true">
+                                <span>Is form 2 valid? {{ctrl.isForm2Valid}}</span>
+                            </fieldset>
+
+                        </form>
+
+                    </section>
+
+                    <section>
+                        <form name="myForm3" novalidate ut-form-watcher="form3">
+
+                            <fieldset>
+                                <legend>Form 3</legend>
+                                <input id="myInput3" name="myInput3" type="text" placeholder="Type something..."
+                                       ng-model="ctrl.model3" ng-required="true">
+                                <span>Is form 3 valid? {{ctrl.isForm3Valid}}</span>
+                            </fieldset>
+
+                        </form>
+
+                    </section>
+
+                    <span>Are all my forms valid? {{ctrl.areAllFormsValid}}</span>
                 </div>
             </div>
         </div>

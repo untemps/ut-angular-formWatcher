@@ -1,7 +1,7 @@
 /*!
  * angular-directive-boilerplate
  * https://github.com/mohsen1/angular-directive-boilerplate
- * Version: 0.0.8 - 2015-07-17T12:12:13.318Z
+ * Version: 0.0.8 - 2015-10-01T09:10:49.827Z
  * License: MIT
  */
 
@@ -10,8 +10,12 @@
     'use strict';
 
     var module = angular.module('untemps.utFormWatcher', []);
+    module.constant('utFormServiceChannel', {
+        FORM_VALIDITY_CHANGE: 'utFormService:formValidityChange',
+        ALL_FORMS_VALIDITY_CHANGE: 'utFormService:allFormsValidityChange'
+    });
     module.factory('Form', [Form]);
-    module.service('utFormService', ['$rootScope', 'Form', utFormService]);
+    module.service('utFormService', ['$rootScope', 'utFormServiceChannel', 'Form', utFormService]);
     module.directive('utFormWatcher', ['utFormService', utFormWatcher]);
 
     /**
@@ -35,7 +39,8 @@
      * @description Manage the forms.
      *
      */
-    function utFormService($rootScope, Form) {
+    function utFormService($rootScope, utFormServiceChannel, Form) {
+        /*jshint validthis: true */
         var __this = this;
 
         __this.forms = [];
@@ -96,7 +101,8 @@
                 form.isValid = isValid;
             }
 
-            $rootScope.$emit('formService:formValidityChange', form, __this.areAllFormsValid());
+            $rootScope.$emit(utFormServiceChannel.FORM_VALIDITY_CHANGE, name, isValid);
+            $rootScope.$emit(utFormServiceChannel.ALL_FORMS_VALIDITY_CHANGE, __this.areAllFormsValid());
 
             return form !== null;
         };
@@ -124,6 +130,7 @@
     function utFormWatcher(utFormService) {
 
         function controller($scope) {
+            /*jshint validthis: true */
             var __this = this;
 
             __this.name = null;
@@ -151,7 +158,6 @@
                 __this.name = null;
                 __this.element = null;
                 __this.ngFormCtrl = null;
-                __this.isValid = false;
             });
         }
 
