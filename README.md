@@ -2,8 +2,8 @@
 
 Angular's directive that let you control all the forms of your application in a centralized way.
 
-You can simply register a form by adding the attribute ut-form-watcher on the form tag.
-You will be informed of every changes of validation status by listening specific events dispatched on the root scope for a single form or for all the registered forms.
+You can simply register a form by adding the attribute ut-form-watcher on the form tag.  
+You will be informed of every changes of validation status by listening specific events dispatched on the root scope for a single form or for all the registered forms.  
 You can programmatically check the validation status for each form using the utFormService API.
 
 ### Installation
@@ -16,19 +16,19 @@ bower install ut-angular-formWatcher
 
 ### Usage
 
-Add it as a dependency to your app :
+Add it as a dependency to your app:
 
 ```javascript
 angular.module('app', ['untemps.utFormWatcher']);
 ```
 
-Register each form to be controlled by the directive using the attribute 'ut-form-watcher' on the form tag :
+Register each form to be controlled by the directive using the attribute 'ut-form-watcher' on the form tag:
 
 ```html
 <form name="myForm" novalidate ut-form-watcher>
 ```
 
-By default, the form will be registered with the value of the name attribute but you can specify a registration name like this :
+By default, the form will be registered with the value of the name attribute but you can specify a registration name like this:
 
 ```html
 <form name="myForm" novalidate ut-form-watcher="registeredForm">
@@ -80,7 +80,7 @@ Return a Form instance containing the name and the validation status of the form
 
 ### Development
 
-Install Gulp via npm if you don't have it :
+Install Gulp via npm if you don't have it:
 
 ```shell
 npm install -g gulp
