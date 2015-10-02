@@ -1,6 +1,6 @@
 # ut-angular-formWatcher
 
-Angular's directive that let you control all the forms of your application in a centralized way.
+Angular directive that let you control all the forms of your application in a centralized way.
 
 You can simply register a form by adding the attribute ut-form-watcher on the form tag.  
 You will be informed of every changes of validation status by listening specific events dispatched on the root scope for a single form or for all the registered forms.  
@@ -95,4 +95,5 @@ npm install -g gulp
 * `gulp serve-test`: runs tests and keep test browser open for development. Watches for changes in source and test files to re-run the tests
 
 ### License
-MIT
+MIT  
+Thanks to send me an email when using this directive (v.lebadezet@untemps.net).
