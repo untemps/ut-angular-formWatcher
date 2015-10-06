@@ -16,6 +16,12 @@ bower install ut-angular-formWatcher
 
 ### Usage
 
+Add the .js and .css files to your index.html:
+
+```html
+<script src="bower_components/dist/ut-angular-formWatcher.min.js"></script>
+```
+
 Add it as a dependency to your app:
 
 ```javascript

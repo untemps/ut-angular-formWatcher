@@ -1,8 +1,8 @@
 {
     "name": "ut-angular-formWatcher",
-    "version": "0.0.1",
+    "version": "1.0.0",
     "authors": "v.lebadezet@untemps.net",
-    "description": "Watch one or several forms and notify observers of all changes in their validation status",
+    "description": "Angular directive that let you control all the forms of your application in a centralized way.",
     "main": "dist/ut-angular-formWatcher.js",
     "license": "MIT",
     "private": false,
