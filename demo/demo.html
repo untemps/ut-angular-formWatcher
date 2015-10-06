@@ -1,8 +1,8 @@
 <!doctype html>
-<html ng-app="demo">
+<html>
     <head>
         <meta charset="utf-8">
-        <title>AngularJS directive demo</title>
+        <title>ut-angular-formWatcher demo</title>
 
         <!-- TODO: Include Angular from Bower components -->
         <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.18/angular.js"></script>
@@ -11,7 +11,7 @@
 
         <link rel="stylesheet" href="demo.css">
     </head>
-    <body>
+    <body ng-app="demo">
         <div class="container">
             <h1 class="text-muted">Demo</h1>
 
@@ -31,7 +31,7 @@
                                 <input id="myInput1" name="myInput1" type="text" placeholder="Type something..."
                                        ng-model="ctrl.model1" ng-required="true">
                                 <span>Is form 1 valid? {{ctrl.isForm1Valid}}</span>
-
+                            </fieldset>
 
                         </form>
 

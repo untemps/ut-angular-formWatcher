@@ -40,6 +40,10 @@ By default, the form will be registered with the value of the name attribute but
 <form name="myForm" novalidate ut-form-watcher="registeredForm">
 ```
 
+### Demo
+
+[http://plnkr.co/37oxrIR9DnCMG46OZO4x](http://plnkr.co/37oxrIR9DnCMG46OZO4x)
+
 ### 'utFormService' API
 
 * `unregisterForm(formName)`:  
