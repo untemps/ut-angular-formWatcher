@@ -87,6 +87,29 @@ Return true if the form exists in the registration list.
 * `getForm(formName)`  
 Return a Form instance containing the name and the validation status of the form specified by its registration name.  
     * `formName`: Registration name of the form.
+    
+### 'utFormServiceChannel' Events
+
+These events will be dispatched on the $rootScope.
+You can easily listen to them like this:
+
+```javascript
+$rootScope.$on(utFormServiceChannel.ALL_FORMS_VALIDITY_CHANGE, function(event, isValid) {
+    __this.areAllFormsValid = isValid;
+});
+```  
+
+
+  
+* `utFormService:formValidityChange`:  
+utFormServiceChannel.FORM_VALIDITY_CHANGE
+Dispatch every time a single form validity changes.
+
+
+
+* `utFormService:allFormsValidityChange`:  
+utFormServiceChannel.ALL_FORMS_VALIDITY_CHANGE
+Dispatch every time the global forms validity changes.
 
 ### Development
 
@@ -106,4 +129,4 @@ npm install -g gulp
 
 ### License
 MIT  
-Thanks to send me an email when using this directive (v.lebadezet@untemps.net).
+Thanks to send me an email when using this directive: [v.lebadezet@untemps.net](v.lebadezet@untemps.net).
