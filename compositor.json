@@ -1,0 +1,95 @@
+{
+  "name": "untemps/ut-angular-formWatcher",
+  "version": "0.1.4",
+  "libraries": {
+    "xv": "^1.1.25"
+  },
+  "title": "ut-angular-formWatcher",
+  "branch": "master",
+  "style": {
+    "name": "Brutalist",
+    "componentSet": {
+      "nav": "nav/BasicNav",
+      "header": "header/BasicHeader",
+      "article": "article/MarkdownArticle",
+      "footer": "footer/BasicFooter"
+    },
+    "fontFamily": "Consolas, \"Liberation Mono\", Menlo, Courier, monospace",
+    "heading": {},
+    "typeScale": [
+      48,
+      32,
+      20,
+      18,
+      16,
+      14,
+      12
+    ],
+    "layout": {
+      "maxWidth": 1024,
+      "fluid": true
+    },
+    "colors": {
+      "text": "#333",
+      "background": "#fff",
+      "primary": "#666",
+      "secondary": "#888",
+      "highlight": "#1f80ff",
+      "muted": "#f6f6f6",
+      "border": "#eee"
+    }
+  },
+  "content": [
+    {
+      "component": "nav",
+      "links": [
+        {
+          "href": "https://github.com/untemps/ut-angular-formWatcher",
+          "text": "GitHub"
+        },
+        {
+          "href": "https://npmjs.com/package/ut-angular-formWatcher",
+          "text": "npm"
+        }
+      ]
+    },
+    {
+      "component": "header",
+      "heading": "ut-angular-formWatcher",
+      "subhead": "Angular directive that let you control all the forms of your application in a centralized way.",
+      "children": [
+        {
+          "component": "ui/TweetButton",
+          "text": "ut-angular-formWatcher: Angular directive that let you control all the forms of your application in a centralized way.",
+          "url": ""
+        },
+        {
+          "component": "ui/GithubButton",
+          "user": "untemps",
+          "repo": "ut-angular-formWatcher"
+        }
+      ],
+      "text": "v1.0.0"
+    },
+    {
+      "component": "article",
+      "metadata": {
+        "source": "github.readme"
+      },
+      "html": "\n\n<p>You can simply register a form by adding the attribute ut-form-watcher on the form tag.<br>You will be informed of every changes of validation status by listening specific events dispatched on the root scope for a single form or for all the registered forms.<br>You can programmatically check the validation status for each form using the utFormService API.</p>\n<h3>Installation</h3>\n<p>Install via bower :</p>\n<pre>bower install ut-angular-formWatcher</pre><h3>Usage</h3>\n<p>Add the .js and .css files to your index.html:</p>\n<pre><span class=\"hljs-tag\">&lt;<span class=\"hljs-name\">script</span> <span class=\"hljs-attr\">src</span>=<span class=\"hljs-string\">&quot;bower_components/dist/ut-angular-formWatcher.min.js&quot;</span>&gt;</span><span class=\"undefined\"></span><span class=\"hljs-tag\">&lt;/<span class=\"hljs-name\">script</span>&gt;</span></pre><p>Add it as a dependency to your app:</p>\n<pre>angular.module(<span class=\"hljs-string\">&apos;app&apos;</span>, [<span class=\"hljs-string\">&apos;untemps.utFormWatcher&apos;</span>]);</pre><p>Register each form to be controlled by the directive using the attribute &apos;ut-form-watcher&apos; on the form tag:</p>\n<pre><span class=\"hljs-tag\">&lt;<span class=\"hljs-name\">form</span> <span class=\"hljs-attr\">name</span>=<span class=\"hljs-string\">&quot;myForm&quot;</span> <span class=\"hljs-attr\">novalidate</span> <span class=\"hljs-attr\">ut-form-watcher</span>&gt;</span></pre><p>By default, the form will be registered with the value of the name attribute but you can specify a registration name like this:</p>\n<pre><span class=\"hljs-tag\">&lt;<span class=\"hljs-name\">form</span> <span class=\"hljs-attr\">name</span>=<span class=\"hljs-string\">&quot;myForm&quot;</span> <span class=\"hljs-attr\">novalidate</span> <span class=\"hljs-attr\">ut-form-watcher</span>=<span class=\"hljs-string\">&quot;registeredForm&quot;</span>&gt;</span></pre><h3>Demo</h3>\n<p><a href=\"http://plnkr.co/37oxrIR9DnCMG46OZO4x\">http://plnkr.co/37oxrIR9DnCMG46OZO4x</a></p>\n<h3>&apos;utFormService&apos; API</h3>\n<ul>\n<li><code>unregisterForm(formName)</code>:<br>Unregister a form. The service will stop listening for the validation status changes.<br>Return true if the form exists in the registration list.<ul>\n<li><code>formName</code>: Registration name of the form.</li>\n</ul>\n</li>\n</ul>\n<ul>\n<li><code>unregisterAllForms()</code>:<br>Unregister all the forms.<br>The service will stop listening for the validation status changes.\nReturn true if all the forms has been unregistered.</li>\n</ul>\n<ul>\n<li><code>registeredFormCount()</code><br>Return the number of registered forms.</li>\n</ul>\n<ul>\n<li><code>isFormValid(formName)</code><br>Return true if the form specified by its registration name is valid.<ul>\n<li><code>formName</code>: Registration name of the form.</li>\n</ul>\n</li>\n</ul>\n<ul>\n<li><code>areAllFormsValid()</code><br>Return true if all the registered forms are valid.</li>\n</ul>\n<ul>\n<li><code>setFormValidity(formName, isValid)</code><br>Explicitly set the validation status for a form.<br>Return true if the form exists in the registration list.<ul>\n<li><code>formName</code>: Registration name of the form.</li>\n<li><code>isValid</code>: True if the form should be set to valid.</li>\n</ul>\n</li>\n</ul>\n<ul>\n<li><code>getForm(formName)</code><br>Return a Form instance containing the name and the validation status of the form specified by its registration name.  <ul>\n<li><code>formName</code>: Registration name of the form.</li>\n</ul>\n</li>\n</ul>\n<h3>&apos;utFormServiceChannel&apos; Events</h3>\n<p>These events will be dispatched on the $rootScope.\nYou can easily listen to them like this:</p>\n<pre>$rootScope.$on(utFormServiceChannel.ALL_FORMS_VALIDITY_CHANGE, <span class=\"hljs-function\"><span class=\"hljs-keyword\">function</span>(<span class=\"hljs-params\">event, isValid</span>) </span>{\n    __this.areAllFormsValid = isValid;\n});</pre><ul>\n<li><code>utFormService:formValidityChange</code>:<br>utFormServiceChannel.FORM_VALIDITY_CHANGE\nDispatch every time a single form validity changes.</li>\n</ul>\n<ul>\n<li><code>utFormService:allFormsValidityChange</code>:<br>utFormServiceChannel.ALL_FORMS_VALIDITY_CHANGE\nDispatch every time the global forms validity changes.</li>\n</ul>\n<h3>Development</h3>\n<p>Install Gulp via npm if you don&apos;t have it:</p>\n<pre>npm install -g gulp</pre><h3>Available commands</h3>\n<ul>\n<li><code>gulp</code>: build and test the project</li>\n<li><code>gulp build</code>: build the project and make new files in<code>dist</code></li>\n<li><code>gulp serve</code>: start a server to serve the demo page and launch a browser then watches for changes in <code>src</code> files to reload the page</li>\n<li><code>gulp test</code>: run tests</li>\n<li><code>gulp serve-test</code>: runs tests and keep test browser open for development. Watches for changes in source and test files to re-run the tests</li>\n</ul>\n<h3>License</h3>\n<p>MIT<br>Thanks to send me an email when using this directive: <a href=\"v.lebadezet@untemps.net\">v.lebadezet@untemps.net</a>.</p>\n"
+    },
+    {
+      "component": "footer",
+      "links": [
+        {
+          "href": "https://github.com/untemps/ut-angular-formWatcher",
+          "text": "GitHub"
+        },
+        {
+          "href": "https://github.com/untemps",
+          "text": "untemps"
+        }
+      ]
+    }
+  ]
+}
