@@ -56,7 +56,7 @@
     {
       "component": "header",
       "heading": "ut-angular-formWatcher",
-      "subhead": "Angular directive that let you control all the forms of your application in a centralized way.",
+      "subhead": "Angular directive that lets you control all the forms of your application in a centralized way.",
       "children": [
         {
           "component": "ui/TweetButton",
