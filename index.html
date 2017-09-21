@@ -1,0 +1,74 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=Edge"/><meta name="viewport" content="width=device-width, initial-scale=1"/><title>ut-angular-formWatcher</title><style>*{box-sizing:border-box}.cxs-display-table{display:table}.cxs-3057891252 h1{font-size:inherit;margin-top:32px}.cxs-3954183383{font-size:24px}.cxs-3057891252 pre code:before{content:none}.cxs-4066908388{clear:both}.cxs-799160745{font-size:48px}.cxs-1246195080{margin-left:-8px;margin-right:-8px}.cxs-2947628758{}.cxs-2947628758 h1{font-weight:600;line-height:1.25;font-size:48px;margin-top:32px;margin-bottom:8px}.cxs-2947628758 h2{font-weight:600;line-height:1.25;font-size:24px;margin-top:32px;margin-bottom:8px}.cxs-2947628758 h3{font-weight:600;line-height:1.25;font-size:20px;margin-top:32px;margin-bottom:8px}.cxs-2947628758 h4{font-weight:600;line-height:1.25;font-size:16px;margin-top:32px;margin-bottom:8px}.cxs-2947628758 h5{font-weight:600;line-height:1.25;font-size:14px;margin-top:32px;margin-bottom:8px}.cxs-2947628758 h6{font-weight:600;line-height:1.25;font-size:12px;margin-top:32px;margin-bottom:8px}.cxs-2947628758 p{overflow-x:auto;margin-top:0px;margin-bottom:16px}.cxs-2947628758 code{font-family:Menlo, monospace;font-size:14px;padding:4px;background-color:#eee;border-radius:2px}.cxs-2947628758 pre{font-family:Menlo, monospace;font-size:14px;overflow-x:auto;padding:16px;margin-top:8px;margin-bottom:32px;background-color:#eee;border-radius:2px}.cxs-2947628758 pre .hljs-keyword{color:#08e}.cxs-2947628758 pre .hljs-built_in{color:#059}.cxs-2947628758 pre .hljs-type{color:#059}.cxs-2947628758 pre .hljs-literal{color:#08e}.cxs-2947628758 pre .hljs-number{color:#e08}.cxs-2947628758 pre .hljs-regexp{color:#08e}.cxs-2947628758 pre .hljs-string{color:#059}.cxs-2947628758 pre .hljs-subst{color:#059}.cxs-2947628758 pre .hljs-symbol{color:#08e}.cxs-2947628758 pre .hljs-class{color:#08e}.cxs-2947628758 pre .hljs-function{color:#e08}.cxs-2947628758 pre .hljs-title{color:#08e}.cxs-2947628758 pre .hljs-params{color:#059}.cxs-2947628758 pre .hljs-comment{color:#059}.cxs-2947628758 pre .hljs-doctag{color:#059}.cxs-2947628758 pre .hljs-meta{color:#059}.cxs-2947628758 pre .hljs-meta-keyword{color:#08e}.cxs-2947628758 pre .hljs-meta-string{color:#08e}.cxs-2947628758 hr{margin-top:48px;margin-bottom:48px;border:0px;border-bottom-style:solid;border-bottom-width:1px;border-bottom:2px solid #ddd}.cxs-2947628758 table{border-collapse:separate;border-spacing:0px;max-width:100%;width:100%}.cxs-2947628758 th{text-align:left;line-height:inherit;vertical-align:bottom}.cxs-2947628758 td{vertical-align:top;line-height:inherit}.cxs-2947628758 img{max-width: 100%;height: auto;margin-top:16px;margin-bottom:16px}.cxs-2947628758 a{color:#08e;text-decoration: none}.cxs-2947628758 a:hover{text-decoration:underline}.cxs-2947628758 ul{padding-left:32px;margin-top:0px;margin-bottom:16px}.cxs-2262331773{font-size:20px}.cxs-3057891252 pre code{}.cxs-424651569{font-size:20px}.cxs-3057891252 b:after{content:"*"}.cxs-3057891252{font-size:14px}.cxs-3057891252 b:before{content:"*"}.cxs-3057891252 h1:before{content:"# ";color:#888}.cxs-3057891252 h2{font-size:inherit;margin-top:32px}.cxs-3057891252 h2:before{content:"## ";color:#888}.cxs-3057891252 h3{font-size:inherit}.cxs-3057891252 h3:before{content:"### ";color:#888}.cxs-3057891252 h4{font-size:16px}.cxs-3057891252 h5{font-size:14px}.cxs-3057891252 h6{font-size:12px}.cxs-3057891252 p{overflow-x:auto}.cxs-3057891252 code{font-family:inherit;font-size:inherit;overflow-x:auto;color:#666}.cxs-3057891252 code:before{content:"`"}.cxs-3057891252 code:after{content:"`"}.cxs-3057891252 pre{font-family:inherit;font-size:inherit;overflow-x:auto;color:#666}.cxs-3057891252 pre:before{content:"```";display:block}.cxs-3057891252 pre:after{content:"```";display:block}.cxs-3057891252 pre .hljs-keyword{color:#666}.cxs-3057891252 pre .hljs-built_in{color:#888}.cxs-3057891252 pre .hljs-type{color:#888}.cxs-3057891252 pre .hljs-literal{color:#666}.cxs-3057891252 pre .hljs-number{color:#1f80ff}.cxs-3057891252 pre .hljs-regexp{color:#666}.cxs-3057891252 pre .hljs-string{color:#888}.cxs-3057891252 pre .hljs-subst{color:#888}.cxs-3057891252 pre .hljs-symbol{color:#666}.cxs-3057891252 pre .hljs-class{color:#666}.cxs-3057891252 pre .hljs-function{color:#1f80ff}.cxs-3057891252 pre .hljs-title{color:#666}.cxs-3057891252 pre .hljs-params{color:#888}.cxs-3057891252 pre .hljs-comment{color:#888}.cxs-3057891252 pre .hljs-doctag{color:#888}.cxs-3057891252 pre .hljs-meta{color:#888}.cxs-3057891252 pre .hljs-meta-keyword{color:#666}.cxs-3057891252 pre .hljs-meta-string{color:#666}.cxs-3057891252 hr{margin-top:48px;margin-bottom:48px;border:0px;border-bottom-style:solid;border-bottom-width:1px}.cxs-3057891252 table{border-collapse:separate;border-spacing:0px;max-width:100%;width:100%}.cxs-3057891252 th{text-align:left;line-height:inherit;vertical-align:bottom}.cxs-3057891252 td{vertical-align:top;line-height:inherit}.cxs-3057891252 img{max-width: 100%;height: auto;margin-top:16px;margin-bottom:16px}.cxs-3057891252 a{color:inherit}.cxs-3057891252 ul{list-style-type:none;padding-left:0px}.cxs-3057891252 li{}.cxs-3057891252 li:before{content:"- "}.cxs-3057891252 b{}.cxs-3057891252 pre code:after{content:none}@media screen and (min-width: 52em) { .cxs-799160745{font-size:72px} }@media screen and (min-width: 52em) { .cxs-424651569{} }@media screen and (min-width: 52em) { .cxs-2262331773{font-size:32px} }@media screen and (min-width: 52em) { .cxs-3954183383{} }</style></head><body style="margin:0;"><div class="Xv" style="font-family:Consolas, &quot;Liberation Mono&quot;, Menlo, Courier, monospace;font-weight:400;line-height:1.5;color:#333;background-color:#fff;"><nav style="display:flex;align-items:center;padding-top:8px;padding-bottom:8px;padding-left:16px;padding-right:16px;background-color:#fff;"><a href="https://github.com/untemps/ut-angular-formWatcher" class="Link" style="box-sizing:border-box;color:inherit;display:inline-block;font-size:14px;line-height:16px;padding-left:16px;padding-right:16px;padding-top:16px;padding-bottom:16px;font-weight:600;text-decoration:none;">GitHub</a><a href="https://npmjs.com/package/ut-angular-formWatcher" class="Link" style="box-sizing:border-box;color:inherit;display:inline-block;font-size:14px;line-height:16px;padding-left:16px;padding-right:16px;padding-top:16px;padding-bottom:16px;font-weight:600;text-decoration:none;">npm</a></nav><header><div style="box-sizing:border-box;max-width:1024px;padding-top:16px;padding-bottom:16px;padding-left:32px;padding-right:32px;"><h1 class="cxs-2262331773" style="box-sizing:border-box;margin:0;">ut-angular-formWatcher</h1><h2 class="cxs-424651569" style="box-sizing:border-box;margin:0;">Angular directive that lets you control all the forms of your application in a centralized way.</h2><p class="Text" style="box-sizing:border-box;font-size:18px;margin:0;">v1.0.0</p><div class="cxs-1246195080" style="box-sizing:border-box;padding-top:8px;padding-bottom:8px;"><iframe src="https://platform.twitter.com/widgets/tweet_button.html?text=ut-angular-formWatcher%3A%20Angular%20directive%20that%20let%20you%20control%20all%20the%20forms%20of%20your%20application%20in%20a%20centralized%20way.&amp;url=&amp;via=&amp;hashtags=&amp;size=" height="20" allowtransparency="true" frameborder="0" scrolling="no" style="box-sizing:border-box;width:61px;overflow:hidden;margin:8px;"></iframe><iframe src="https://ghbtns.com/github-btn.html?type=star&amp;count=true&amp;user=untemps&amp;repo=ut-angular-formWatcher&amp;size=" height="20" frameborder="0" scrolling="no" style="box-sizing:border-box;width:100px;overflow:hidden;margin:8px;"></iframe><div class="cxs-4066908388 cxs-display-table"></div></div></div></header><div class="cxs-3057891252" style="box-sizing:border-box;max-width:1024px;padding-top:32px;padding-bottom:32px;padding-left:32px;padding-right:32px;"><article style="box-sizing:border-box;"><div>
+
+<p>You can simply register a form by adding the attribute ut-form-watcher on the form tag.<br />You will be informed of every changes of validation status by listening specific events dispatched on the root scope for a single form or for all the registered forms.<br />You can programmatically check the validation status for each form using the utFormService API.</p>
+<h3>Installation</h3>
+<p>Install via bower :</p>
+<pre>bower install ut-angular-formWatcher</pre><h3>Usage</h3>
+<p>Add the .js and .css files to your index.html:</p>
+<pre><span class="hljs-tag">&lt;<span class="hljs-name">script</span> <span class="hljs-attr">src</span>=<span class="hljs-string">&quot;bower_components/dist/ut-angular-formWatcher.min.js&quot;</span>&gt;</span><span class="undefined"></span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span></pre><p>Add it as a dependency to your app:</p>
+<pre>angular.module(<span class="hljs-string">'app'</span>, [<span class="hljs-string">'untemps.utFormWatcher'</span>]);</pre><p>Register each form to be controlled by the directive using the attribute 'ut-form-watcher' on the form tag:</p>
+<pre><span class="hljs-tag">&lt;<span class="hljs-name">form</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;myForm&quot;</span> <span class="hljs-attr">novalidate</span> <span class="hljs-attr">ut-form-watcher</span>&gt;</span></pre><p>By default, the form will be registered with the value of the name attribute but you can specify a registration name like this:</p>
+<pre><span class="hljs-tag">&lt;<span class="hljs-name">form</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;myForm&quot;</span> <span class="hljs-attr">novalidate</span> <span class="hljs-attr">ut-form-watcher</span>=<span class="hljs-string">&quot;registeredForm&quot;</span>&gt;</span></pre><h3>Demo</h3>
+<p><a href="http://plnkr.co/37oxrIR9DnCMG46OZO4x">http://plnkr.co/37oxrIR9DnCMG46OZO4x</a></p>
+<h3>'utFormService' API</h3>
+<ul>
+<li><code>unregisterForm(formName)</code>:<br />Unregister a form. The service will stop listening for the validation status changes.<br />Return true if the form exists in the registration list.<ul>
+<li><code>formName</code>: Registration name of the form.</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li><code>unregisterAllForms()</code>:<br />Unregister all the forms.<br />The service will stop listening for the validation status changes.
+Return true if all the forms has been unregistered.</li>
+</ul>
+<ul>
+<li><code>registeredFormCount()</code><br />Return the number of registered forms.</li>
+</ul>
+<ul>
+<li><code>isFormValid(formName)</code><br />Return true if the form specified by its registration name is valid.<ul>
+<li><code>formName</code>: Registration name of the form.</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li><code>areAllFormsValid()</code><br />Return true if all the registered forms are valid.</li>
+</ul>
+<ul>
+<li><code>setFormValidity(formName, isValid)</code><br />Explicitly set the validation status for a form.<br />Return true if the form exists in the registration list.<ul>
+<li><code>formName</code>: Registration name of the form.</li>
+<li><code>isValid</code>: True if the form should be set to valid.</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li><code>getForm(formName)</code><br />Return a Form instance containing the name and the validation status of the form specified by its registration name.  <ul>
+<li><code>formName</code>: Registration name of the form.</li>
+</ul>
+</li>
+</ul>
+<h3>'utFormServiceChannel' Events</h3>
+<p>These events will be dispatched on the $rootScope.
+You can easily listen to them like this:</p>
+<pre>$rootScope.$on(utFormServiceChannel.ALL_FORMS_VALIDITY_CHANGE, <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">event, isValid</span>) </span>{
+    __this.areAllFormsValid = isValid;
+});</pre><ul>
+<li><code>utFormService:formValidityChange</code>:<br />utFormServiceChannel.FORM_VALIDITY_CHANGE
+Dispatch every time a single form validity changes.</li>
+</ul>
+<ul>
+<li><code>utFormService:allFormsValidityChange</code>:<br />utFormServiceChannel.ALL_FORMS_VALIDITY_CHANGE
+Dispatch every time the global forms validity changes.</li>
+</ul>
+<h3>Development</h3>
+<p>Install Gulp via npm if you don't have it:</p>
+<pre>npm install -g gulp</pre><h3>Available commands</h3>
+<ul>
+<li><code>gulp</code>: build and test the project</li>
+<li><code>gulp build</code>: build the project and make new files in<code>dist</code></li>
+<li><code>gulp serve</code>: start a server to serve the demo page and launch a browser then watches for changes in <code>src</code> files to reload the page</li>
+<li><code>gulp test</code>: run tests</li>
+<li><code>gulp serve-test</code>: runs tests and keep test browser open for development. Watches for changes in source and test files to re-run the tests</li>
+</ul>
+<h3>License</h3>
+<p>MIT<br />Thanks to send me an email when using this directive: <a href="v.lebadezet@untemps.net">v.lebadezet@untemps.net</a>.</p>
+</div></article></div><footer><div style="box-sizing:border-box;max-width:1024px;margin-bottom:32px;padding-top:8px;padding-bottom:8px;padding-left:32px;padding-right:32px;"><div style="margin-left:-16px;margin-right:-16px;"><a href="https://github.com/untemps/ut-angular-formWatcher" class="Link" style="box-sizing:border-box;color:inherit;display:inline-block;font-size:14px;line-height:16px;padding-left:16px;padding-right:16px;padding-top:16px;padding-bottom:16px;font-weight:600;text-decoration:none;">GitHub</a><a href="https://github.com/untemps" class="Link" style="box-sizing:border-box;color:inherit;display:inline-block;font-size:14px;line-height:16px;padding-left:16px;padding-right:16px;padding-top:16px;padding-bottom:16px;font-weight:600;text-decoration:none;">untemps</a></div><div></div></div></footer></div><div style="font-family:-apple-system, sans-serif;font-size:12px;font-weight:600;text-align:right;padding:24px;color:#333;background-color:#eee;"><a href="http://compositor.io" style="color:inherit;text-decoration:none;">Built with Compositor.io</a></div></body></html>
